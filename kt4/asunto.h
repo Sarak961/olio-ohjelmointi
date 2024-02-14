@@ -1,21 +1,18 @@
-#ifndef ASUNTO_H
-#define ASUNTO_H
-#include <iostream>
-using namespace std;
+    #ifndef ASUNTO_H
+    #define ASUNTO_H
+    #include <iostream>
+    using namespace std;
 
 
-class asunto
-{
+    class asunto
+    {
 
-public:
-    void maarita(void);
-    double laskeKulutus;
+    public:
+        void maarita(void);
+        double laskeKulutus;
+        int asukasMaara = 2;
+        int neliot = 100;
 
-private:
+    };
 
-    int asukasMaara = 2;
-    int neliot = 100;
-
-};
-
-#endif // ASUNTO_H
+    #endif // ASUNTO_H

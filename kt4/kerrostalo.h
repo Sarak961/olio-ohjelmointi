@@ -1,19 +1,20 @@
 #ifndef KERROSTALO_H
 #define KERROSTALO_H
-
 #include <iostream>
-#include "asunto.h"
+using namespace std;
 #include "katutaso.h"
 #include "kerros.h"
 
-class kerrostalo : public kerros {
+class kerrostalo
+{
 public:
-    void laskeKulutus(double);
+    kerrostalo();
+    double laskeKulutus(double);
 
 private:
-    int eka;
-    int toka;
-    int kolmas;
+    katutaso eka;
+    katutaso toka;
+    katutaso kolmas;
 };
 
 #endif // KERROSTALO_H

@@ -1,19 +1,22 @@
 #ifndef KERROS_H
 #define KERROS_H
-
-#include <iostream>
 #include "asunto.h"
-#include "katutaso.h"
+#include <iostream>
+using namespace std;
 
-class kerros : public katutaso {
+
+class kerros
+{
 public:
     kerros();
-    void maaritaAsunnot(ASUNTO_H);
-    double laskeKulutus();
+    virtual void maaritaAsunnot(void); //virtual void mahdollistaa alaluokkien korvaavan perusluokan toteutuksen
+    double laskeKulutus(double);
 
 private:
-    int as3;
-    int as4;
+    asunto as1;
+    asunto as2;
+    asunto as3;
+    asunto as4;
 };
 
 #endif // KERROS_H

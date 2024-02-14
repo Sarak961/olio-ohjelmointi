@@ -1,23 +1,24 @@
 #ifndef KATUTASO_H
 #define KATUTASO_H
 
-#include "asunto.h"
 #include <iostream>
-
 using namespace std;
 
-class katutaso : private ASUNTO_H {
+#include "asunto.h"
+
+class katutaso : public kerros //määritellään luokka katutaso, jonka kerros perii
+{
 public:
-    void maaritaAsunnot(ASUNTO_H);
-    double katutaso::laskeKulutus() {
-        double kulutus = 0.0;
-        return kulutus;
-    }
+    katutaso();
+   virtual void maaritaAsunnot(void) override; //julkinen virtuaalifunktio, joka määrittelee asunnot
+    //override = tässä yhteydessä: katutaso korvaa perusluokan "kerros".
+   //virtuaalifunktio mahdollistaa alaluokkien korvaavan perusluokan toteutuksen.
+    double laskeKulutus(double);
 
 
 private:
-    int as1;
-    int as2;
+    asunto as1;
+    asunto as2;
 };
 
 #endif // KATUTASO_H
